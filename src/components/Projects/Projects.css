@@ -1,0 +1,145 @@
+.section-projects {
+  background-color: #13070c;
+  padding: 128px 64px 64px 64px;
+}
+
+.projects-heading-container h1 {
+  font-size: 48px;
+  color: #eff9f0;
+  text-align: center;
+}
+
+.projects-desc-container {
+  margin-top: 64px;
+}
+
+.projects-desc-container p {
+  text-align: justify;
+  color: #eff9f0;
+}
+
+.projects-desc-container p span {
+  color: #276fbf;
+  font-weight: 600;
+}
+
+.projects-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 64px;
+  padding: 0px 82px;
+  gap: 64px;
+}
+
+.project-container {
+  display: flex;
+  gap: 32px;
+  padding: 0px 82px;
+  align-items: center;
+  justify-content: center;
+}
+
+.project-container a {
+  text-decoration: none;
+}
+
+.project-container-img img {
+  width: 62px;
+  height: 62px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s;
+}
+
+.project-container-img img:hover {
+  transform: scale(1.2);
+}
+
+.project-desc-container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.project-desc-container-title {
+  color: #21897e;
+  font-weight: 800;
+  font-size: 20px;
+}
+
+.project-desc-container-title:hover {
+  text-decoration: underline;
+}
+
+.project-desc-container-desc {
+  color: #eff9f0;
+  text-align: justify;
+}
+
+.project-desc-container-readMore {
+  color: #276fbf;
+}
+
+.project-desc-container-readMore:hover {
+  text-decoration: underline;
+}
+
+/* Responsiveness */
+
+@media (max-width: 1024px) {
+  .section-projects {
+    padding: 96px 32px 32px 32px;
+  }
+
+  .projects-container {
+    padding: 0px 32px;
+  }
+
+  .project-desc-container {
+    gap: 10px;
+  }
+
+  .project-container {
+    padding: 0px;
+  }
+}
+
+@media (max-width: 768px) {
+  .project-desc-container-desc {
+    font-size: 12px;
+  }
+
+  .project-desc-container-title {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 426px) {
+  .section-projects {
+    padding: 32px;
+  }
+
+  .projects-heading-container h1 {
+    font-size: 40px;
+  }
+
+  .projects-desc-container p {
+    font-size: 12px;
+  }
+
+  .project-container {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 320px) {
+  .section-projects {
+    padding: 16px;
+  }
+
+  .projects-container {
+    padding: 0px;
+  }
+}

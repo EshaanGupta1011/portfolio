@@ -1,0 +1,203 @@
+.section-contact {
+  background-color: #13070c;
+  padding: 128px 64px 64px 64px;
+  color: #eff9f0;
+}
+
+.contact-heading-container h1 {
+  font-size: 48px;
+  color: #eff9f0;
+  text-align: center;
+}
+
+.contact-heading-container h1 span {
+  color: #21897e;
+}
+
+.contact-desc {
+  text-align: center;
+  font-style: italic;
+  font-size: 20px;
+  font-weight: 600;
+  margin-top: 16px;
+}
+
+.contact-form-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 64px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+}
+
+.form-input-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-input-field p {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.form-input-field input,
+.form-input-field textarea {
+  padding: 8px 24px;
+  border-radius: 8px;
+  width: 555px;
+  height: 50px;
+  background-color: #21897e;
+  color: #fff;
+  border: none;
+  font-size: 20px;
+}
+
+.form-input-field textarea {
+  border-radius: 0px !important;
+}
+
+.form-input-field textarea {
+  height: 100px !important;
+}
+
+.form-input-field input::placeholder,
+.form-input-field textarea::placeholder {
+  color: #ffffff37;
+}
+
+.form-input-field input:focus,
+.form-input-field textarea:focus {
+  outline: none; /* Removes the focus outline */
+}
+
+.form-input-field input:-webkit-autofill,
+.form-input-field textarea:-webkit-autofill {
+  background-color: #21897e !important; /* Match your input background color */
+  color: #fff !important; /* Match your text color */
+  -webkit-text-fill-color: #fff !important; /* Ensures text color stays white */
+  border: none; /* Ensures no border appears */
+  box-shadow: 0 0 0px 1000px #21897e inset !important; /* Prevents white highlights */
+  transition: background-color 5000s ease-in-out 0s; /* Fix for background color override */
+}
+
+.contact-btn {
+  background-color: #276fbf;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 600;
+  width: 30%;
+  padding: 8px 0px;
+  border-radius: 16px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.contact-btn:hover {
+  background-color: #1b4a80;
+}
+
+.animation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.thank-you-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.thank-you-container h1 {
+  font-size: 48px;
+  text-align: center;
+  font-weight: 800;
+}
+
+.thank-you-container h2 {
+  font-size: 36px;
+  color: #21897e;
+  text-align: center;
+  font-weight: 800;
+}
+
+.button-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 32px;
+}
+
+/*  */
+
+textarea::-webkit-scrollbar {
+  width: 10px; /* Width of the scrollbar */
+}
+
+textarea::-webkit-scrollbar-track {
+  background: #eff9f0; /* Track color */
+}
+
+textarea::-webkit-scrollbar-thumb {
+  background: #276fbf; /* Thumb color */
+}
+
+textarea::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Thumb color on hover */
+}
+
+/* Responsiveness */
+
+@media (max-width: 1024px) {
+  .section-contact {
+    padding: 96px 32px 32px 32px;
+  }
+
+  .contact-form {
+    gap: 48px;
+  }
+}
+
+@media (max-width: 768px) {
+  .form-input-field input,
+  .form-input-field textarea {
+    width: 350px;
+    height: 50px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 426px) {
+  .section-contact {
+    padding: 32px;
+  }
+
+  .contact-heading-container h1 {
+    font-size: 40px;
+  }
+
+  .contact-desc {
+    font-size: 14px;
+  }
+
+  .form-input-field p {
+    font-size: 12px;
+  }
+
+  .form-input-field input,
+  .form-input-field textarea {
+    width: 300px;
+    height: 40px;
+    font-size: 12px;
+  }
+
+  .contact-btn {
+    font-size: 12px;
+  }
+}

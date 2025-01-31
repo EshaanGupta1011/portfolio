@@ -1,0 +1,6 @@
+background colour - #13070C
+primary text - #EFF9F0 , #EFF9F018
+secondary text - #276FBF
+
+CTA buttons - #011936 
+secondary colour - #21897E , #21897e30 , 

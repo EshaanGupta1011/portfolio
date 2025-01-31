@@ -1,0 +1,144 @@
+.main-section {
+  background-color: #13070c;
+  padding: 128px 64px 64px 64px;
+}
+
+.section-heading-container {
+  color: #21897e;
+  font-size: 30px;
+  text-align: center;
+}
+
+.section-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 64px;
+  gap: 0;
+  padding: 0px 64px;
+}
+
+.section-grid-img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0px 32px;
+}
+
+.section-grid-img img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 70%;
+}
+
+.section-grid-desc {
+  color: #eff9f0;
+}
+
+.section-grid-desc h4 {
+  margin-bottom: 16px;
+  font-size: 28px;
+}
+
+.section-grid-desc p {
+  font-size: 16px;
+  text-align: justify;
+}
+
+.section-grid-desc-blue {
+  color: #276fbf;
+  font-weight: 600;
+}
+
+/* Amoli Page Design */
+
+.amoli-tagline {
+  color: #276fbf;
+  font-style: italic;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.amoli-img-container-1 {
+  display: grid;
+  grid-template-columns: 1fr 0.5fr;
+  gap: 0px;
+}
+
+.amoli-img-container-2 {
+  display: grid;
+  grid-template-columns: 0.5fr 1fr;
+  gap: 0px;
+}
+
+.amoli-img-container-1 div img,
+.amoli-img-container-2 div img {
+  width: 75%;
+}
+
+/* ACM Page Design */
+
+.acm-section-grid-img img {
+  width: 80%;
+}
+
+.acm-section-grid-img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Responsiveness */
+
+@media (max-width: 1024px) {
+  .section-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  .section-heading-container {
+    font-size: 26px;
+  }
+}
+
+@media (max-width: 768px) {
+  .main-section {
+    padding: 96px 32px 32px 32px;
+  }
+}
+
+@media (max-width: 426px) {
+  .main-section {
+    padding: 64px 32px 32px 32px;
+  }
+
+  .section-heading-container {
+    font-size: 16px;
+  }
+
+  .section-grid {
+    padding: 0px;
+  }
+
+  .section-grid-desc p {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 376px) {
+  .main-section {
+    padding: 64px 16px 16px 16px;
+  }
+
+  .section-heading-container h1 {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 320px) {
+  .section-grid-desc p {
+    font-size: 12px;
+  }
+}

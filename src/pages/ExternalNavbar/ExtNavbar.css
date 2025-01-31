@@ -1,0 +1,88 @@
+/* General Navbar Styles */
+.navbar-container {
+  padding: 8px 32px;
+  background-color: #011936; /* Default solid background */
+  color: #eff9f0;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  transition: background-color 0.3s ease-in-out; /* Smooth background transition */
+}
+
+/* Transparent Navbar at the Top */
+.navbar-container.transparent {
+  background-color: transparent; /* Transparent background when at the top */
+}
+
+/* Navbar Layout */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-text-container {
+  display: flex;
+  gap: 64px;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Navbar Text Hidden at Top */
+.navbar-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 64px;
+  transition: opacity 0.3s ease-in-out; /* Smooth text visibility transition */
+}
+
+/* Navbar Links */
+.navbar-links {
+  list-style: none;
+  display: flex;
+  gap: 32px;
+}
+
+.navbar-link {
+  font-size: 18px;
+  cursor: pointer;
+  color: #eff9f0;
+  text-decoration: none;
+}
+
+/* Navbar Logo */
+.navbar-logo img {
+  width: 58px;
+  height: 40px;
+}
+
+/* Navbar Icons */
+.navbar-icons {
+  font-size: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+  border-radius: 50%;
+}
+
+.navbar-icons a {
+  color: #eff9f0;
+  transition: transform 0.2s ease-in-out; /* Icon hover effect */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navbar-icons a:hover {
+  transform: scale(1.1); /* Slight zoom-in on hover */
+}
+
+.navbar-icon {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
