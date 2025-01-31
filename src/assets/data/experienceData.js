@@ -45,7 +45,7 @@ const experience = [
   {
     img: expImg6,
     heading: "The Science Club - USAR",
-    role: "Vice Chaiperson",
+    role: "Vice Chairperson",
     route: "sciClub",
   },
 
