@@ -1,11 +1,18 @@
 import DVProject from "../DVProject.png";
 import DDProject from "../DDProject.png";
+import QuaminProject from "../exp-4.png";
 import GitHubProject from "../GitHubProject.png";
 import GridFrequencyReport from "../pdf/14519051622_EshaanGupta_AIML_ST.pdf";
 import FacialRecognitionReport from "../pdf/FacialRecognitionReport.pdf";
 import CloudComputingProject from "../pdf/CloudComputingProject.pdf";
 
 const project = [
+  {
+    img: QuaminProject,
+    title: "Quamin LLP website:",
+    desc: "During my internship at Quamin, i developed a MERN stack website for the company along with an admin panel from where whole website can be controlled.",
+    link: "https://quamin.in/",
+  },
   {
     img: DVProject,
     title: "Dant Villa dental clinic website:",

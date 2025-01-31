@@ -1,12 +1,13 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import { BrowserRouter } from "react-router-dom"; // Import BrowserRouter
+import { HashRouter } from "react-router-dom";
+
 import Routes from "./Routes"; // Import your Routes component
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <BrowserRouter>
+    <HashRouter>
       <Routes />
-    </BrowserRouter>
+    </HashRouter>
   </StrictMode>
 );
