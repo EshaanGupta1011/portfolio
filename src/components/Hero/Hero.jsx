@@ -2,7 +2,7 @@ import React from "react";
 import "./Hero.css";
 import heroBgImg from "../../assets/heroBgImg.jpg";
 import heroImg from "../../assets/heroImg.jpg";
-import resume from "../../assets/pdf/resume.pdf";
+import resume from "../../assets/pdf/EshaanResume.pdf";
 
 const Hero = () => {
   const handleMouseMove = (event) => {
