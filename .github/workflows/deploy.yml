@@ -3,21 +3,30 @@ name: Deploy Vite React App
 on:
   push:
     branches:
-      - main # Runs when changes are pushed to the main branch
+      - main
 
 permissions:
-  contents: write # Required for deploying to gh-pages
+  contents: write
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
+      - name: Checkout full repository
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
-      - name: Fetch all files
-        run: git fetch --unshallow
+      - name: Debug file existence
+        run: ls -R src/assets/
+
+      - name: Verify file existence before build
+        run: |
+          if [ ! -f src/assets/GitHubProject.png ]; then
+            echo "Error: GitHubProject.png is missing!"
+            exit 1
+          fi
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -25,15 +34,11 @@ jobs:
           node-version: 18
           cache: "npm"
 
-      - name: Clean install
-        run: rm -rf node_modules package-lock.json && npm install
+      - name: Install dependencies
+        run: npm install
 
       - name: Build project
         run: npm run build
 
       - name: Deploy to GitHub Pages
-        uses: JamesIves/github-pages-deploy-action@v4
-        with:
-          branch: gh-pages
-          folder: dist
-          clean: true
+        uses: JamesIves/github-pages-deploy-action@
