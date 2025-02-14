@@ -1,10 +1,11 @@
 import DVProject from "../DVProject.png";
 import DDProject from "../DDProject.png";
 import QuaminProject from "../exp-4.png";
-import GitHubProject from "../GitHubProject.png";
 import GridFrequencyReport from "../pdf/14519051622_EshaanGupta_AIML_ST.pdf";
 import FacialRecognitionReport from "../pdf/FacialRecognitionReport.pdf";
 import CloudComputingProject from "../pdf/CloudComputingProject.pdf";
+
+const GitHubProject = "/GitHubProject.png";
 
 const project = [
   {
