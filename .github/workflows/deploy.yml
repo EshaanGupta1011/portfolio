@@ -25,7 +25,7 @@ jobs:
 
       - name: Verify file existence before build
         run: |
-          if [ ! -f src/assets/GitHubProject.png ]; then
+          if [ ! -f public/GitHubProject.png ]; then
             echo "Error: GitHubProject.png is missing!"
             exit 1
           fi
