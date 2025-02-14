@@ -4,8 +4,7 @@ import QuaminProject from "../exp-4.png";
 import GridFrequencyReport from "../pdf/14519051622_EshaanGupta_AIML_ST.pdf";
 import FacialRecognitionReport from "../pdf/FacialRecognitionReport.pdf";
 import CloudComputingProject from "../pdf/CloudComputingProject.pdf";
-
-const GitHubProject = "/GitHubProject.png";
+import GitHubProject from "/GitHubProject.png";
 
 const project = [
   {
