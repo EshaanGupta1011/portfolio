@@ -11,18 +11,16 @@ permissions:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    environment: github-pages # Specify the environment to access secrets
+    environment: github-pages # Ensure secrets are accessible
 
     steps:
-      - name: Checkout full repository
+      - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0
+          fetch-depth: 0 # Get full history for deployments
 
-      - name: List all files in the repository
-        run: |
-          echo "Listing all files in the repository"
-          ls -R # List all files recursively in the repository
+      - name: List all files in the repository (Debugging)
+        run: ls -R
 
       - name: Verify file existence before build
         run: |
@@ -37,14 +35,18 @@ jobs:
           node-version: 18
           cache: "npm"
 
+      - name: Install dependencies
+        run: npm install
+
       - name: Create .env file
         run: |
           echo "VITE_EMAILJS_PUBLIC_KEY=${{ secrets.VITE_EMAILJS_PUBLIC_KEY }}" >> .env
           echo "VITE_EMAILJS_SERVICE_ID=${{ secrets.VITE_EMAILJS_SERVICE_ID }}" >> .env
           echo "VITE_EMAILJS_TEMPLATE_ID=${{ secrets.VITE_EMAILJS_TEMPLATE_ID }}" >> .env
+        shell: bash
 
-      - name: Install dependencies
-        run: npm install
+      - name: Verify .env file contents (Debugging)
+        run: cat .env
 
       - name: Build project
         run: npm run build
