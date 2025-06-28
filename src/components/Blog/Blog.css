@@ -1,0 +1,137 @@
+.section-blog {
+  background-color: #13070c;
+  padding: 128px 64px 64px 64px;
+}
+
+.blog-heading-container h1 {
+  font-size: 48px;
+  color: #eff9f0;
+  text-align: center;
+}
+
+.blog-desc-container {
+  margin-top: 64px;
+}
+
+.blog-desc-container p {
+  text-align: justify;
+  color: #eff9f0;
+}
+
+/*  */
+
+/* Blog Container */
+.blog-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 64px;
+  padding: 64px;
+  background-color: #13070c; /* Dark background for the section */
+}
+
+/* Blog Box */
+.blog-box {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  padding: 16px;
+  border: 1px solid #333;
+  border-radius: 16px;
+  color: #eff9f0; /* Content color */
+  transition: box-shadow 0.3s ease;
+  text-decoration: none;
+}
+
+/* Blog Title */
+.blog-title {
+  font-size: 24px;
+  color: #21897e;
+  margin: 0;
+}
+
+.blog-platform {
+  color: #5a5a5a;
+  font-style: italic;
+}
+
+/* Blog Description */
+.blog-desc {
+  font-size: 16px;
+  color: #eff9f0;
+  margin: 0;
+}
+
+/* Blog Date */
+.blog-date {
+  font-size: 14px;
+  color: #276fbf;
+  font-style: italic;
+  margin: 0;
+}
+
+/* Hover Effect */
+.blog-box:hover {
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.3); /* Subtle glossy light effect */
+} /*  */
+
+@media (max-width: 1024px) {
+  .section-blog {
+    padding: 96px 32px 32px 32px;
+  }
+
+  .blog-desc-container {
+    gap: 10px;
+  }
+
+  .blog-container {
+    display: flex;
+    flex-direction: column;
+    padding: 32px 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .blog-desc {
+    font-size: 12px;
+  }
+
+  .blog-title {
+    font-size: 16px;
+  }
+
+  .blog-desc-container p {
+    font-size: 12px;
+  }
+
+  .blog-container {
+    display: flex;
+    flex-direction: column;
+    padding: 32px 16px;
+  }
+}
+
+@media (max-width: 426px) {
+  .section-blog {
+    padding: 32px;
+  }
+
+  .blog-heading-container h1 {
+    font-size: 40px;
+  }
+
+  .blog-desc-container p {
+    font-size: 12px;
+  }
+
+  .blog-container {
+    display: flex;
+    flex-direction: column;
+    padding: 32px 16px;
+  }
+}
+
+@media (max-width: 320px) {
+  .section-blog {
+    padding: 16px;
+  }
+}

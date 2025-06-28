@@ -45,6 +45,11 @@ const Navbar = () => {
                   Projects
                 </Link>
               </li>
+              <li className="navbar-link">
+                <Link to="blog" smooth={true} duration={500}>
+                  Blogs
+                </Link>
+              </li>
             </ul>
           </div>
 
@@ -62,6 +67,14 @@ const Navbar = () => {
               rel="noopener noreferrer"
             >
               <ion-icon name="logo-github" className="navbar-icon"></ion-icon>
+            </a>
+
+            <a
+              href="https://medium.com/@eshaan.gupta.33"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <ion-icon name="logo-medium" className="navbar-icon"></ion-icon>
             </a>
           </div>
         </div>

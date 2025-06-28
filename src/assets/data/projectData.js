@@ -30,6 +30,14 @@ const project = [
   {
     img: GitHubProject,
     title:
+      "Classification of Diabetic Retinopathy using CNN and image procesessing techniques",
+    desc: "Developed a convolutional neural network architecture to classify the types of diabetic retinopathy using retinal scans. Applied various pre processing techniques to enhance the images and capture all the relevant features. Used pre existing ML models as benchmark, with ResNet getting an accuracy of 94% and my model getting an accuracy of 95%.",
+    link: "",
+  },
+
+  {
+    img: GitHubProject,
+    title:
       "Grid Frequency Prediction using Machine Learning Models and Time Series Analysis:",
     desc: " During my internship at Reliance, I conducted exploratory data analysis and developed a machine learning model that can help to predict the grid frequencies.",
     readLink: "Click here to read the project report.",
