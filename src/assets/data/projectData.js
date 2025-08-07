@@ -5,8 +5,30 @@ import GridFrequencyReport from "../pdf/14519051622_EshaanGupta_AIML_ST.pdf";
 import FacialRecognitionReport from "../pdf/FacialRecognitionReport.pdf";
 import CloudComputingProject from "../pdf/CloudComputingProject.pdf";
 import GitHubProject from "/GitHubProject.png";
+import SwasthaHealth from "../SwasthaHealth.png";
 
 const project = [
+  {
+    img: GitHubProject,
+    title: "Classification of Diabetic Retinopathy:",
+    desc: "Engineered a multi-class classification pipeline for detecting Diabetic Retinopathy from retinal fundus images using deep learning models (InceptionV3, EfficientNetV2B0, ResNet18/34/151, ConvNext Small, custom CNN). Achieved 97% accuracy across 5 severity classes, with preprocessing improving model consistency by 3% compared to raw data.",
+    link: "https://github.com/EshaanGupta1011/DiabetesDetectionUsingRetinalScans",
+  },
+  {
+    img: SwasthaHealth,
+    title: "Swastha Health",
+    desc: "Developed a health monitoring web app used by over 10 individuals to upload medical reports, extract vital signs, and track trends. Secured with hashed passwords, powered by MongoDB, and hosted on Render (backend) and Netlify (frontend), with Docker containerization managed via DockerHub.",
+    link: "https://swasthahealth.netlify.app/",
+  },
+
+  {
+    img: GitHubProject,
+    title:
+      "Vigyaan - A machine learning platform to conduct machine learning model training and conduct exploratory data analysis:",
+    desc: "I developed a machine learning platform that can perform ML model training on user entered data using a virtual machine from Oracle and can perform exploratory data analysis easily on user specified data or pre-loaded datasets.",
+    link: "https://github.com/EshaanGupta1011/ML_Platform_Frontend",
+  },
+
   {
     img: QuaminProject,
     title: "Quamin LLP website:",
@@ -30,14 +52,6 @@ const project = [
   {
     img: GitHubProject,
     title:
-      "Classification of Diabetic Retinopathy using CNN and image procesessing techniques",
-    desc: "Developed a convolutional neural network architecture to classify the types of diabetic retinopathy using retinal scans. Applied various pre processing techniques to enhance the images and capture all the relevant features. Used pre existing ML models as benchmark, with ResNet getting an accuracy of 94% and my model getting an accuracy of 95%.",
-    link: "",
-  },
-
-  {
-    img: GitHubProject,
-    title:
       "Grid Frequency Prediction using Machine Learning Models and Time Series Analysis:",
     desc: " During my internship at Reliance, I conducted exploratory data analysis and developed a machine learning model that can help to predict the grid frequencies.",
     readLink: "Click here to read the project report.",
@@ -51,14 +65,6 @@ const project = [
       "Korero - A machine learning model that converts ISL to text/speech:",
     desc: "I participated in SRM Hackhound 8.0 and developed a machine learning platform that converts indian sign language (ISL) to text or speech in real time, using device’s web camera. ",
     link: "https://github.com/EshaanGupta1011/Korero",
-  },
-
-  {
-    img: GitHubProject,
-    title:
-      "Vigyaan - A machine learning platform to conduct machine learning model training and conduct exploratory data analysis:",
-    desc: "I developed a machine learning platform that can perform ML model training on user entered data using a virtual machine from Oracle and can perform exploratory data analysis easily on user specified data or pre-loaded datasets.",
-    link: "https://github.com/EshaanGupta1011/ML_Platform_Frontend",
   },
 
   {
