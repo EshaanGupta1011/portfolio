@@ -9,6 +9,8 @@ import HomePage from "./pages/homepage/HomePage";
 import QuaminPage from "./pages/quaminPage/QuaminPage";
 import ReliancePage from "./pages/reliancePage/ReliancePage";
 import SciClubPage from "./pages/sciClubPage/SciClubPage";
+import TerafacPage from "./pages/terafacPage/TerafacPage";
+import ResearchPage from "./pages/researchPage/ResearchPage";
 
 const Routes = () => {
   return (
@@ -21,6 +23,8 @@ const Routes = () => {
       <Route path="/quamin" element={<QuaminPage />} />
       <Route path="/reliance" element={<ReliancePage />} />
       <Route path="/sciClub" element={<SciClubPage />} />
+      <Route path="/terafac" element={<TerafacPage />} />
+      <Route path="/research" element={<ResearchPage />} />
     </Switch>
   );
 };

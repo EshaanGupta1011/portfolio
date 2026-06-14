@@ -41,6 +41,11 @@ const Navbar = () => {
                 </Link>
               </li>
               <li className="navbar-link">
+                <Link to="research" smooth={true} duration={500}>
+                  Research
+                </Link>
+              </li>
+              <li className="navbar-link">
                 <Link to="projects" smooth={true} duration={500}>
                   Projects
                 </Link>

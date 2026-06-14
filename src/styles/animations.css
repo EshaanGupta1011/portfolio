@@ -1,0 +1,52 @@
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.55s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.55s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Revolving ring wrapper — used on circular images in About & Education */
+.img-ring-wrapper {
+  position: relative;
+  display: inline-block;
+  border-radius: 50%;
+  line-height: 0;
+}
+
+.img-ring-wrapper::before {
+  content: "";
+  position: absolute;
+  inset: -22px;
+  border-radius: 50%;
+  border: 3px solid transparent;
+  background:
+    linear-gradient(#13070c, #13070c) padding-box,
+    conic-gradient(
+      from 0deg,
+      transparent 0%,
+      transparent 52%,
+      rgba(150, 150, 150, 0.1) 68%,
+      rgba(195, 195, 195, 0.28) 82%,
+      rgba(220, 220, 220, 0.38) 94%,
+      transparent 100%
+    ) border-box;
+  animation: img-ring-revolve 6s linear infinite;
+  z-index: 0;
+}
+
+.img-ring-wrapper img {
+  position: relative;
+  z-index: 1;
+  display: block;
+}
+
+@keyframes img-ring-revolve {
+  to {
+    transform: rotate(360deg);
+  }
+}

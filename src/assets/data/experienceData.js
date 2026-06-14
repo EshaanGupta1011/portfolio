@@ -5,8 +5,16 @@ import expImg4 from "../exp-4.png";
 import expImg5 from "../exp-5.png";
 import expImg6 from "../exp-6.png";
 import expImg7 from "../exp-7.png";
+import expImg8 from "../exp-8.png";
+
 
 const experience = [
+    {
+    img: expImg8,
+    heading: "Terafac Technologies",
+    role: "Machine Learning and Data Engineer",
+    route: "terafac",
+  },
   {
     img: expImg1,
     heading: "Sasan Power Plant",

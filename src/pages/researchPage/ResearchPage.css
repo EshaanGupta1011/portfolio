@@ -1,0 +1,411 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&display=swap");
+
+/* Dark + neon pink */
+
+:root {
+  --pk: #FF2D78;
+  --pk-dim: rgba(255, 45, 120, 0.55);
+  --pk-faint: rgba(255, 45, 120, 0.12);
+}
+
+.rp-root {
+  background: #0c0810;
+  min-height: 100vh;
+  color: #e8e0ec;
+  font-family: inherit;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* ─── Petals ─── */
+.rp-petals {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.rp-petal {
+  position: absolute;
+  top: -16px;
+  background: rgba(255, 45, 120, 0.55);
+  border-radius: 50% 4% 50% 4%;
+  box-shadow: 0 0 6px rgba(255, 45, 120, 0.35);
+  animation: rp-fall linear infinite;
+}
+
+@keyframes rp-fall {
+  0%   { transform: translateY(0) rotate(0deg) translateX(0); opacity: 0; }
+  6%   { opacity: 0.65; }
+  88%  { opacity: 0.4; }
+  100% { transform: translateY(100vh) rotate(480deg) translateX(24px); opacity: 0; }
+}
+
+/* ─── Navbar ─── */
+.rp-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 48px;
+  background: rgba(12, 8, 16, 0.88);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 45, 120, 0.12);
+}
+
+.rp-nav-logo {
+  width: 48px;
+  height: 34px;
+  object-fit: contain;
+  cursor: pointer;
+}
+
+.rp-back-btn {
+  background: transparent;
+  border: 1px solid var(--pk-dim);
+  color: var(--pk);
+  font-size: 13px;
+  letter-spacing: 0.06em;
+  padding: 7px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
+  font-family: inherit;
+}
+
+.rp-back-btn:hover {
+  background: var(--pk);
+  color: #0c0810;
+  box-shadow: 0 0 14px rgba(255, 45, 120, 0.4);
+}
+
+/* ─── Hero ─── */
+.rp-hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 130px 10% 90px;
+  background: #0c0810;
+  position: relative;
+}
+
+/* Thin neon pink vertical line — left edge accent */
+.rp-hero::before {
+  content: "";
+  position: absolute;
+  left: 7%;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 180px;
+  width: 1px;
+  background: linear-gradient(to bottom, transparent, var(--pk) 40%, var(--pk) 60%, transparent);
+  opacity: 0.6;
+}
+
+.rp-hero-content {
+  max-width: 700px;
+  position: relative;
+  z-index: 2;
+}
+
+.rp-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--pk);
+  margin-bottom: 28px;
+  font-weight: 700;
+}
+
+.rp-badge-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--pk);
+  flex-shrink: 0;
+  box-shadow: 0 0 8px var(--pk);
+  animation: rp-pulse 2.2s ease-in-out infinite;
+}
+
+@keyframes rp-pulse {
+  0%, 100% { opacity: 1; transform: scale(1); box-shadow: 0 0 8px var(--pk); }
+  50%       { opacity: 0.4; transform: scale(0.65); box-shadow: 0 0 3px var(--pk); }
+}
+
+.rp-title {
+  font-size: clamp(26px, 3.8vw, 48px);
+  font-weight: 700;
+  line-height: 1.24;
+  color: #f0e8f4;
+  margin-bottom: 20px;
+  letter-spacing: -0.01em;
+  font-family: "Noto Serif JP", Georgia, serif;
+}
+
+.rp-authors {
+  font-size: 14px;
+  color: rgba(232, 224, 236, 0.45);
+  letter-spacing: 0.05em;
+  margin-bottom: 40px;
+}
+
+.rp-hero-divider {
+  width: 44px;
+  height: 2px;
+  background: var(--pk);
+  box-shadow: 0 0 8px rgba(255, 45, 120, 0.5);
+}
+
+/* ─── Sections ─── */
+.rp-section {
+  padding: 80px 10%;
+  position: relative;
+  z-index: 2;
+}
+
+.rp-section-alt {
+  background: #100d14;
+  border-top: 1px solid rgba(255, 45, 120, 0.08);
+  border-bottom: 1px solid rgba(255, 45, 120, 0.08);
+}
+
+.rp-section-heading {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--pk);
+  margin-bottom: 36px;
+}
+
+.rp-section-heading::after {
+  content: "";
+  display: block;
+  width: 28px;
+  height: 1px;
+  background: var(--pk);
+  margin-top: 10px;
+  opacity: 0.35;
+}
+
+/* ─── Abstract ─── */
+.rp-body-text {
+  font-size: 16px;
+  line-height: 1.9;
+  color: rgba(232, 224, 236, 0.65);
+  max-width: 680px;
+  text-align: justify;
+}
+
+/* ─── Contributions ─── */
+.rp-contributions {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  max-width: 680px;
+}
+
+.rp-contribution-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  font-size: 15px;
+  line-height: 1.8;
+  color: rgba(232, 224, 236, 0.65);
+}
+
+.rp-bullet {
+  flex-shrink: 0;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--pk);
+  box-shadow: 0 0 6px rgba(255, 45, 120, 0.5);
+  margin-top: 10px;
+}
+
+/* ─── Gallery ─── */
+.rp-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.rp-placeholder-img {
+  aspect-ratio: 4 / 3;
+  background: rgba(255, 45, 120, 0.04);
+  border: 1px solid rgba(255, 45, 120, 0.15);
+  border-top: 2px solid rgba(255, 45, 120, 0.5);
+  border-radius: 3px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.rp-placeholder-num {
+  font-size: 30px;
+  font-weight: 700;
+  color: rgba(255, 45, 120, 0.12);
+  font-family: "Noto Serif JP", serif;
+  line-height: 1;
+}
+
+.rp-placeholder-label {
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(232, 224, 236, 0.3);
+}
+
+/* ─── Publication details ─── */
+.rp-details {
+  max-width: 620px;
+}
+
+.rp-detail-row {
+  display: flex;
+  gap: 24px;
+  padding: 16px 0;
+  border-bottom: 1px solid rgba(255, 45, 120, 0.08);
+}
+
+.rp-detail-row:last-child {
+  border-bottom: none;
+}
+
+.rp-detail-label {
+  font-size: 10px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--pk);
+  font-weight: 700;
+  min-width: 90px;
+  flex-shrink: 0;
+  padding-top: 2px;
+}
+
+.rp-detail-value {
+  font-size: 15px;
+  color: rgba(232, 224, 236, 0.65);
+  line-height: 1.55;
+}
+
+.rp-detail-accent {
+  color: var(--pk);
+  font-style: italic;
+}
+
+/* ─── Hero right decoration ─── */
+.rp-hero-deco {
+  position: absolute;
+  right: 7%;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  pointer-events: none;
+  user-select: none;
+  z-index: 1;
+}
+
+.rp-deco-kanji {
+  font-family: "Noto Serif JP", Georgia, serif;
+  font-size: 210px;
+  font-weight: 700;
+  color: rgba(255, 45, 120, 0.18);
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+
+.rp-deco-side {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+}
+
+.rp-deco-line {
+  width: 1px;
+  height: 56px;
+  background: linear-gradient(to bottom, transparent, rgba(255, 45, 120, 0.55), transparent);
+}
+
+.rp-deco-vtext {
+  writing-mode: vertical-rl;
+  font-family: "Noto Serif JP", serif;
+  font-size: 11px;
+  letter-spacing: 0.28em;
+  color: rgba(255, 45, 120, 0.5);
+}
+
+
+.rp-gallery-img-wrapper {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  border-radius: 3px;
+  border: 1px solid rgba(255, 45, 120, 0.15);
+  border-top: 2px solid rgba(255, 45, 120, 0.5);
+}
+
+.rp-gallery-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.rp-gallery-img-wrapper:hover .rp-gallery-img {
+  transform: scale(1.05);
+}
+
+.rp-gallery-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 8px 12px;
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(232, 224, 236, 0.75);
+  background: linear-gradient(to top, rgba(12, 8, 16, 0.85), transparent);
+}
+
+/* ─── Responsive ─── */
+@media (max-width: 1024px) {
+  .rp-hero  { padding: 110px 8% 80px; }
+  .rp-section { padding: 64px 8%; }
+  .rp-hero-deco { display: none; }
+}
+
+@media (max-width: 768px) {
+  .rp-navbar { padding: 10px 24px; }
+  .rp-hero { padding: 100px 32px 64px; }
+  .rp-hero::before { display: none; }
+  .rp-section { padding: 56px 32px; }
+  .rp-gallery { grid-template-columns: 1fr; }
+  .rp-detail-row { flex-direction: column; gap: 6px; }
+  .rp-detail-label { min-width: unset; }
+}
+
+@media (max-width: 426px) {
+  .rp-hero { padding: 88px 24px 48px; }
+  .rp-section { padding: 48px 24px; }
+  .rp-title { font-size: 24px; }
+}

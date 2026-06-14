@@ -1,18 +1,24 @@
 /* General Navbar Styles */
 .navbar-container {
   padding: 8px 32px;
-  background-color: #011936; /* Default solid background */
+  background-color: rgba(1, 25, 54, 0.88);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
   color: #eff9f0;
   position: fixed;
   width: 100%;
   top: 0;
   z-index: 1000;
-  transition: background-color 0.3s ease-in-out; /* Smooth background transition */
+  transition: background-color 0.3s ease-in-out, backdrop-filter 0.3s ease-in-out;
+  border-bottom: 1px solid rgba(39, 111, 191, 0.12);
 }
 
 /* Transparent Navbar at the Top */
 .navbar-container.transparent {
-  background-color: transparent; /* Transparent background when at the top */
+  background-color: transparent;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  border-bottom-color: transparent;
 }
 
 /* Navbar Layout */
@@ -55,6 +61,22 @@
   cursor: pointer;
   color: #eff9f0;
   text-decoration: none;
+  position: relative;
+}
+
+.navbar-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 0;
+  height: 1.5px;
+  background: linear-gradient(90deg, #276fbf, #00b3ff);
+  transition: width 0.3s ease;
+}
+
+.navbar-link:hover::after {
+  width: 100%;
 }
 
 /* Navbar Logo */

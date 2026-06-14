@@ -1,11 +1,14 @@
 import React from "react";
 import "./AboutMe.css";
 import aboutMeImg from "../../assets/aboutMe-1.png";
+import useScrollReveal from "../../hooks/useScrollReveal";
 
 const AboutMe = () => {
+  const ref = useScrollReveal();
+
   return (
     <div className="section-aboutMe" id="about">
-      <div className="aboutMe">
+      <div className="aboutMe reveal" ref={ref}>
         <h1 className="aboutMeHeading">
           ABOUT <span className="aboutMeHeadingStyle">ME</span>
         </h1>
@@ -27,7 +30,7 @@ const AboutMe = () => {
                 full stack web developer{" "}
               </span>
               , enabling me to build robust and scalable digital solutions.
-              However, my curiosity didn’t stop there—my desire to create more
+              However, my curiosity didn't stop there—my desire to create more
               engaging and user-friendly experiences led me to explore and
               develop expertise in{" "}
               <span className="aboutMe-Text-Highlight"> design.</span>
@@ -40,7 +43,9 @@ const AboutMe = () => {
           </div>
 
           <div className="aboutMe-Img">
-            <img src={aboutMeImg} alt="" />
+            <div className="img-ring-wrapper">
+              <img src={aboutMeImg} alt="" />
+            </div>
           </div>
         </div>
       </div>
