@@ -1,5 +1,5 @@
-import React from "react";
-import { Route, Routes as Switch } from "react-router-dom";
+import React, { useEffect } from "react";
+import { Route, Routes as Switch, useLocation } from "react-router-dom";
 import App from "./App";
 import AcmPage from "./pages/acmPage/AcmPage";
 import AmoliPage from "./pages/amoliPage/AmoliPage";
@@ -12,9 +12,19 @@ import SciClubPage from "./pages/sciClubPage/SciClubPage";
 import TerafacPage from "./pages/terafacPage/TerafacPage";
 import ResearchPage from "./pages/researchPage/ResearchPage";
 
+const ScrollToTop = () => {
+  const { pathname } = useLocation();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+  return null;
+};
+
 const Routes = () => {
   return (
-    <Switch>
+    <>
+      <ScrollToTop />
+      <Switch>
       <Route path="/" element={<HomePage />} />
       <Route path="/acm" element={<AcmPage />} />
       <Route path="/amoli" element={<AmoliPage />} />
@@ -26,6 +36,7 @@ const Routes = () => {
       <Route path="/terafac" element={<TerafacPage />} />
       <Route path="/research" element={<ResearchPage />} />
     </Switch>
+    </>
   );
 };
 
