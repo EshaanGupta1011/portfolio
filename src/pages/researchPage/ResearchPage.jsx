@@ -96,7 +96,7 @@ const ResearchPage = () => {
           <span className="rp-deco-kanji">研</span>
           <div className="rp-deco-side">
             <div className="rp-deco-line" />
-            <span className="rp-deco-vtext">大阪 · 日本 · 二〇二四</span>
+            <span className="rp-deco-vtext">大阪 · 日本 · 二〇二六</span>
             <div className="rp-deco-line" />
           </div>
         </div>
